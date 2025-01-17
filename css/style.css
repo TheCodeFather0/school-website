@@ -1,7 +1,79 @@
+/* reset */
 * {
   margin: 0;
   padding: 0;
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+  font-family: open-sans-regular;
+  src: url("../fonts/open-sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: open-sans-italic;
+  src: url("../fonts/open-sans/OpenSans-Italic.ttf");
+}
+
+html,
+body {
+  font-family: open-sans-regular, sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 1200px;
+}
+
+header {
+  color: #fff;
+  background: url("../images/banner.png") no-repeat center;
+  background-size: cover;
+}
+
+.navbar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  color: #cecdcd;
+  margin-left: 25px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+nav .active {
+  color: #fff;
+  font-weight: 700;
+}
+
+nav a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  margin-top: 2px;
+  transition: 0.3s;
+  border-radius: 20px;
+  margin-inline: auto;
+  background-color: #fff;
+}
+
+nav a:hover {
+  color: #fff;
+  font-weight: 700;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav .active::after {
+  width: 100%;
 }
